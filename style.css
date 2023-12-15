@@ -284,6 +284,9 @@ footer img {
         flex-direction: column;
         text-align: center;
     }
+    .infoimportante h1 {
+        display: none;
+    }
     .infoimportante {
         padding-top: 220px;
     }
