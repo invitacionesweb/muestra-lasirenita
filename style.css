@@ -286,6 +286,7 @@ footer img {
     }
     .infoimportante h1 {
         display: none;
+        height: 0px;
     }
     .infoimportante {
         padding-top: 220px;
