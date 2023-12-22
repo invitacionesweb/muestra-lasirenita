@@ -20,7 +20,7 @@
                 <h1>Mila</h1>
 
                 <H2>CUMPLE UNO</H2>
-                <a class="boton2" target="_blank"  href="#">AGENDAR</a>    
+                <a class="boton2" target="_blank"  href="http://evt.to/adsdshshw">AGENDAR</a>    
             </div>
        </div>
     </header>
@@ -28,6 +28,11 @@
         <p>FALTAN:</p>
         <div id="clock"></div>
         <script src="countdown.js"></script>
+    </div>
+    <div id="scroll-to-top">
+      <a href="#inicio">
+        <img src="./img/icono-flecha.png" alt="Volver al inicio">
+      </a>
     </div>
     <div class="galeria">
         <img class="f4" src="./img/img1.png" alt="Gael">
@@ -48,8 +53,8 @@
       -->
       <div class="main-bloque">
           <img src="./img/icon-3.png" alt="">
-          <p>TE ESPERAMOS PARA CELEBRAR MI PRIMER AÑITO EN <strong>XXX XXXX XXXX</strong>, A PARTIR DE LAS 13:00 HS. <br> HACE CLICK PARA SABER COMO LLEGAR</p>
-          <a class="boton" target="_blank"  href="#">COMO LLEGAR</a>    
+          <p>TE ESPERO PARA CELEBRAR MI CUMPLE EL XX DE XXXXX EN XXXXXXX .<br>  A PARTIR DE LAS 12 HS. <br>  HACE CLICK PARA SABER COMO LLEGAR</p>
+          <a class="boton" target="_blank"  href="https://www.google.com/maps/dir//Le+Parc+Figueroa+Alcorta,+Buenos+Aires/@-31.2008075,-64.4461976,10.96z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95bcb5653904678b:0x5eff5128c518698b!2m2!1d-58.405!2d-34.575722?entry=ttu">COMO LLEGAR</a>    
       </div>
 </main>
     <div class="galeria">
@@ -60,8 +65,8 @@
       </div>
       <div class="segundo"> 
         <img src="./img/icon-2.png" alt="">
-        <p>TU PRESENCIA ES MUY IMPORTANTE, NO OLVIDES CONFIRMAR TU ASISTENCIA CON MIS PAPIS</p>
-        <a class="boton2" target="_blank"  href="#">CONFIRMAR</a>  
+        <p>TU PRESENCIA ES MUY IMPORTANTE, NO OLVIDES CONFIRMAR TU ASISTENCIA CON MIS PAPIS ANTES DEL XX XXXXX</p>
+        <a class="boton2" target="_blank"  href="https://wa.link/g85aw1">CONFIRMAR</a>  
       </div>
 
       <div class="galeria">
@@ -76,12 +81,19 @@
           </div>
           <div>
             <h2>Mila</h2>
-            <H3>12.11.24</H3>
+            <H3>05.11.24</H3>
           </div>
           <div>
             <img class="espejo" src="./img/icon-1.png" alt="">
           </div>
       </div>
+
+      <div class="partedemo">
+        <p>Si te gusto esta demostración podes ...</p>
+        <a class="botondemo" href="https://voyinvitacionesweb.mitiendanube.com/productos/la-sirenita-invitacion-web/">COMPRAR</a>
+        <a class="botondemo" href="https://voyinvitacionesweb.mitiendanube.com/cumpleanos/">VER MÁS</a>
+      </div>
+
       <footer>
         <div class="contenido">
           <div>
@@ -105,5 +117,53 @@
         
      </footer>
 
+     <script>
+      // Espera a que se cargue el DOM
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.querySelector("#scroll-to-top");
+  
+        scrollToTopBtn.addEventListener("click", () => {
+          // Comprueba la compatibilidad con "scroll-behavior"
+          if ("scrollBehavior" in document.documentElement.style) {
+            // Usa el desplazamiento suave del navegador
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+            });
+          } else {
+            // Desplazamiento suave de respaldo para navegadores antiguos
+            scrollToTop(0, 600);
+          }
+        });
+  
+        // Función de desplazamiento suave de respaldo para navegadores antiguos
+        function scrollToTop(to, duration) {
+          const start = window.scrollY || document.documentElement.scrollTop;
+          const change = to - start;
+          const increment = 20;
+          let currentTime = 0;
+  
+          const animateScroll = function () {
+            currentTime += increment;
+            const val = Math.easeInOutQuad(currentTime, start, change, duration);
+            window.scrollTo(0, val);
+            if (currentTime < duration) {
+              requestAnimationFrame(animateScroll);
+            }
+          };
+  
+          Math.easeInOutQuad = function (t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+          };
+  
+          requestAnimationFrame(animateScroll);
+        }
+      });
+    </script>
+  
+  
 </body>
 </html>

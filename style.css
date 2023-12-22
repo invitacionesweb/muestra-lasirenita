@@ -15,6 +15,20 @@ body {
     font-family: var(--font-principal);
 
 }
+/* Estilos para la flecha (colócalos aquí o en un archivo de estilos externo) */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  #scroll-to-top img {
+    width: 40px; /* Ajusta el tamaño según tu ícono */
+    height: 40px;
+    cursor: pointer;
+  }
+  
 p {
     padding: 0px;
     margin: 0px;
@@ -225,6 +239,36 @@ main p {
 .end .espejo{
     transform: scaleX(-1);
 }
+
+/* esto se borra */
+.partedemo {
+    text-align: center;
+    padding: 20px 0 30px 0;
+    background-color:#9E85DD ;
+    color: white;
+}
+.partedemo p {
+    padding: 20px 0;
+}
+.partedemo .botondemo {
+    border: 1px solid white;
+    background-color: white;
+    color: #9E85DD;
+    padding: 10px 30PX;
+    text-decoration: none;
+    margin-top:0px;
+    border-radius: 50px;
+}
+.botondemo:hover {
+    color: white;
+     background-color: #9E85DD;
+     border: 1px solid white;
+     padding: 10px 30PX;
+     text-align: center;
+     text-decoration: none;
+}
+
+
 footer {
     width: 100%;
     height: auto;
